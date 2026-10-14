@@ -151,6 +151,14 @@ class StudentYearLevel(models.Model):
     level = models.ForeignKey("director.YearLevel", on_delete=models.DO_NOTHING)
     year = models.ForeignKey("director.SchoolYear", on_delete=models.DO_NOTHING)
     house = models.CharField(max_length=20,null=True,blank=True)
+    section = models.ForeignKey(
+        "director.Section",
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        db_column="section_id",
+        related_name="student_year_levels",
+    )
 
     def __str__(self):
 

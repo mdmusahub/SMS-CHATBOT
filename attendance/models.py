@@ -26,6 +26,7 @@ class Attendance(models.Model):
     status = models.CharField(max_length=1, choices=STATUS_CHOICES)
     marked_at = models.DateField()
     year_level = models.ForeignKey(YearLevel, on_delete=models.CASCADE, null=True, blank=True)
+    leave_reason = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):
         if self.student:

@@ -457,3 +457,21 @@ class IsDirectororOfficeStaff(BasePermission):
 #             return obj.student_level.student_id in children_ids
 
 #         return False
+
+
+class SectionPermission(BasePermission):
+    """
+    Director / Office Staff → full CRUD
+    Teacher → safe methods (GET, HEAD, OPTIONS)
+    Others (Student, Guardian) → safe methods (for their own section) or deny
+    """
+    def has_permission(self, request, view):
+        user = request.user
+        if not user.is_authenticated:
+            return False
+        role_names = [role.name.lower() for role in user.role.all()]
+        if 'director' in role_names or 'office staff' in role_names or user.is_staff or user.is_superuser:
+            return True
+        if 'teacher' in role_names:
+            return request.method in SAFE_METHODS
+        return False

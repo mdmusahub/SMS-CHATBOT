@@ -375,6 +375,25 @@ class YearLevel(models.Model):
         verbose_name_plural = "Year Levels"
         db_table = "YearLevel"
 
+
+class Section(models.Model):
+    year_level = models.ForeignKey(
+        YearLevel,
+        on_delete=models.CASCADE,
+        db_column="year_level_id",
+        related_name="sections",
+    )
+    section_label = models.CharField(max_length=100, db_column="section_label")
+
+    def __str__(self):
+        return f"{self.year_level.level_name} - {self.section_label}"
+
+    class Meta:
+        db_table = "section"
+        unique_together = ("year_level", "section_label")
+        verbose_name = "Section"
+        verbose_name_plural = "Sections"
+
 class FeeRecordManager(models.Manager):
     def get_queryset(self):
         return super().get_queryset().filter(is_active=True)

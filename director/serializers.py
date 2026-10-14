@@ -28,6 +28,14 @@ class YearLevelSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
+class SectionSerializer(serializers.ModelSerializer):
+    year_level_name = serializers.CharField(source='year_level.level_name', read_only=True)
+
+    class Meta:
+        model = Section
+        fields = ['id', 'year_level', 'year_level_name', 'section_label']
+
+
 class SchoolYearSerializer(serializers.ModelSerializer):
     class Meta:
         model = SchoolYear

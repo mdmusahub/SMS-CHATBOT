@@ -74,6 +74,7 @@ class TeacherSerializer(serializers.ModelSerializer):
     banking_detail_input = BankingDetailsSerializer(
         write_only=True, required=False, allow_null=True
     )
+    subject_name = serializers.CharField(source='subject.subject_name', read_only=True, allow_null=True)
 
     class Meta:
         model = Teacher
@@ -92,6 +93,9 @@ class TeacherSerializer(serializers.ModelSerializer):
             "user_profile",
             "joining_date",
             "is_active",
+            "cadre",
+            "subject",
+            "subject_name",
             "banking_detail_input",
             "address_input",
         ]
@@ -266,6 +270,9 @@ class TeacherSerializer(serializers.ModelSerializer):
                 "adhaar_no": instance.adhaar_no,
                 "pan_no": instance.pan_no,
                 "qualification": instance.qualification,
+                "cadre": instance.cadre,
+                "subject": instance.subject_id,
+                "subject_name": instance.subject.subject_name if instance.subject else None,
             }
         )
         return representation

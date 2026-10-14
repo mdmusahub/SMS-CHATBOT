@@ -22,6 +22,15 @@ class Teacher(models.Model):
     qualification = models.CharField(max_length=250,null=True,blank=True)
     joining_date = models.DateField(auto_now_add=True,null=True,blank=True)  #added as of 19Sep25 at 03:00 PM
     is_active = models.BooleanField(default=True)
+    cadre = models.CharField(max_length=10, null=True, blank=True)
+    subject = models.ForeignKey(
+        'director.Subject',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        db_column='subject_id',
+        related_name='teachers',
+    )
 
     year_levels = models.ManyToManyField('director.YearLevel', through='TeacherYearLevel')
     
@@ -55,5 +64,13 @@ class SubstituteAssignment(models.Model):
     date = models.DateField(auto_now_add=True)
 
 
+class TeacherAttendance(models.Model):
+    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
+    date = models.DateField()
+    status = models.CharField(
+        max_length=10,
+        choices=[('present', 'Present'), ('absent', 'Absent'), ('leave', 'Leave')],
+    )
 
-    # substitute table  and teacher attendance new create by saqib
+    class Meta:
+        unique_together = ('teacher', 'date')

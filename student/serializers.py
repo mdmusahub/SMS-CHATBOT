@@ -365,10 +365,12 @@ class StudentYearLevelSerializer(serializers.ModelSerializer):
         source='student.is_active',
         read_only=True
     )
+    section_id = serializers.IntegerField(source='section.id', read_only=True, allow_null=True)
+
     class Meta:
         model = StudentYearLevel
         fields = ['id', 'student', 'level', 'year','student_id', 'student_name','student_email',
-                  'scholar_number','level_name','section','year_name','house',"student_is_active"]
+                  'scholar_number','level_name','section','section_id','year_name','house',"student_is_active"]
         extra_kwargs = {
             'student': {'write_only': True},
             'level': {'write_only': True},
@@ -377,6 +379,8 @@ class StudentYearLevelSerializer(serializers.ModelSerializer):
 
    
     def get_section(self, obj):
+        if obj.section:
+            return obj.section.section_label
         # Try to find an Admission for this student that matches the same year_level and school_year
         try:
             admission = Admission.objects.all_including_inactive().filter(student=obj.student, year_level=obj.level, school_year=obj.year).first()
