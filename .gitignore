@@ -29,7 +29,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 # Custom Ignore: Migration folder (user-defined)
-# # migrations/
+# migrations/
 
 MANIFEST
 .env
