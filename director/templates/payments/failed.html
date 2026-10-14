@@ -1,0 +1,118 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Failed</title>
+  <style>
+    body { font-family: Arial; text-align: center; margin-top: 100px; }
+    .failed { color: red; font-size: 24px; }
+  </style>
+</head>
+<body>
+  <div class="failed">❌ Payment Failed</div>
+  <p>Reason Code: {{ response_code }}</p>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Failed</title>
+  <style>
+    body {
+      font-family: Inter, Arial, sans-serif;
+      background: #f4f6f8;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: #fff;
+      padding: 40px 48px;
+      border-radius: 14px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+      text-align: center;
+      max-width: 420px;
+      animation: pop 0.4s ease;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #e53935;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    .reason {
+      font-size: 11px;
+      color: #999;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 22px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 22px;
+      background: #e53935;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background: #c62828;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <div class="title">Payment Unsuccessful</div>
+
+    <div class="subtitle">
+      No amount has been deducted. </n>
+      Please try again or use a different payment method.
+    </div>
+
+    <!-- {% if response_code %}
+      <div class="reason">
+          Reason Code: <span style="font-weight:500">{{ response_code }}</span>
+      </div>
+    {% endif %} -->
+
+    <!-- <a class="btn" href="https://sms-deployment.vercel.app/admissionFees/">
+      Go Back Now
+    </a> -->
+
+    <a class="btn" id="goBackBtn">Go Back Now</a>
+
+    <script>
+      document.getElementById("goBackBtn").href =
+        "{{ frontend_url }}/admissionFees/";
+    </script>
+
+  </div>
+
+</body>
+</html>

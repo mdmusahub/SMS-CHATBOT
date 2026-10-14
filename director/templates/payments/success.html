@@ -1,0 +1,115 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Success</title>
+  <style>
+    body { font-family: Arial; text-align: center; margin-top: 100px; }
+    .success { color: green; font-size: 24px; }
+  </style>
+</head>
+<body>
+  <div class="success">✅ Payment Successful</div>
+  <p>Transaction ID: {{ txn_id }}</p>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Successful</title>
+  <style>
+    body {
+      font-family: Inter, Arial, sans-serif;
+      background: #f4f6f8;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: #fff;
+      padding: 40px 48px;
+      border-radius: 14px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+      text-align: center;
+      max-width: 420px;
+      animation: pop 0.4s ease;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #2e7d32;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    .txn {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 18px;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 22px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 22px;
+      background: #2e7d32;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background: #1b5e20;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <div class="title">Payment Successful</div>
+
+    <div class="subtitle">
+      Thank you! Your payment has been completed successfully.
+      You can safely return to the fee payment page.
+    </div>
+
+    {% if txn_id %}
+      <div class="txn">
+        Transaction ID: <strong>{{ txn_id }}</strong>
+      </div>
+    {% endif %}
+
+    <a class="btn" id="goBackBtn">Go Back Now</a>
+
+    <script>
+      document.getElementById("goBackBtn").href =
+        "{{ frontend_url }}/admissionFees/";
+    </script>
+
+  </div>
+
+</body>
+</html>

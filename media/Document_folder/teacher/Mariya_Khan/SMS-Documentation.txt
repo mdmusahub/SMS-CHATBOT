@@ -1,0 +1,61 @@
+			School Management System 
+
+The School Management System is a simple, all-in-one platform built to help schools manage their day-to-day work more easily. It takes care of things like student admissions, fee collection, attendance, and academic tracking. Different users like the Director, Office Staff, Teachers, Students, and Guardians have their own logins and see only the features they need. The goal is to save time, reduce paperwork, and make it easier for everyone in the school to stay connected and organized.
+
+There are 5 modules in the application:
+
+1-Authentication and Role based Permissions(Authorisation)
+
+To ensure that only authorized users can access the system, and each user sees and interacts only with the parts of the system that match their role and responsibilities.
+basically there are 5 roles , Director , OfficeStaff , Teacher , Student and Guardian.
+
+
+
+Director can view new admissions, register teachers and other staff members, view all school-wide stats: total students, teachers, attendance %, and class-wise distribution. They can also track student fee records.
+
+Office Staff can handle admissions and fee collection. They can add admissions and update student details, upload documents for students and teachers, view admission-related and fee-related reports, and also see the complete list of students and teachers.
+
+Teachers can mark attendance and view the attendance of their assigned classes. They can also view student lists.
+
+Guardians can see the attendance and fee-related reports of their students and can submit the fees as well.
+
+
+
+2- Admission 
+
+Admission Module handles the complete student enrollment process. Office Staff can register new students by filling in their personal details, assigning classes, uploading required documents, and linking them to guardians. The admission form is as detailed as needed, and there is a separate portal for uploading student documents. They can also update or edit student information and view admission-related reports. The Director can monitor all admissions and track yearly statistics. This module ensures that the admission process is smooth fully digitized.
+
+
+3- Fee Management
+
+Fee Module manages all student fee-related operations. Office Staff can assign fee structures based on class, collect payments, record transactions, and generate fee receipts. The system tracks paid and due amounts for each student. Guardians can view their ward’s fee status and make payments. There are options to pay fees either online or by cash. Online payment functionality has been successfully integrated with Razorpay. The Director can monitor overall fee collection and analyze trends. This module ensures transparent fee management.
+
+
+4- Attendance
+Attendance Module enables teachers to mark and manage student attendance for their assigned classes. Attendance can be recorded daily, and teachers can view attendance history class-wise or student-wise. Students and Guardians can view attendance records in their respective dashboards. Office Staff and the Director can view attendance reports and monitor overall attendance trends. 
+Some features are still pending: the functionality to mark holidays (available to the Director) is implemented but its UI is not yet complete. Additionally, a few dashboard-level attendance views for students and guardians are yet to be developed.
+
+
+
+
+
+Planned Features for Future Development:
+
+
+Module- 5: Exam and Results
+Exam and Results Module is planned to handle exam scheduling, marks entry, and result generation. Teachers will be able to enter subject-wise marks, and the system will calculate totals, grades, and overall performance. Students and Guardians will be able to view results and report cards through their dashboards. The Director and Office Staff will have access to performance analytics class-wise and term-wise. This module is not yet implemented but is scheduled for future development in the upcoming phases.
+
+
+
+Multi-Role Login
+Allows a single user (e.g., a teacher who is also a guardian) to switch between roles without logging out, offering a flexible and user-friendly experience. This ensures smooth access to functionalities based on each role from one account.
+
+Notifications System
+Sends real-time alerts and updates such as fee reminders, attendance alerts, and announcements. Notifications will be delivered via in-app messages, email, or SMS to keep students, guardians, and staff informed and engaged.
+
+Holiday Calendar
+A centralized school-wide calendar that displays holidays, events, and key academic dates. It will be accessible to all users and help in planning, scheduling, and improving transparency across the school.
+
+Handling Removed and Passed-Out Students
+A separate feature will be added to manage records of students who have either left the school or completed their studies.Instead of deleting their records, we’ll move them to a separate section so their data is still available when needed preserving historical records for reporting and future references.
+
