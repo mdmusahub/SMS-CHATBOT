@@ -73,6 +73,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',         # comment this as of 10Sep25 at 03:30 PM to check refresh
     'django_filters',
+    'academic_chatbot',
 ]
 
 MIDDLEWARE = [
@@ -371,3 +372,59 @@ LOGGING = {
 TWILIO_ACCOUNT_SID = 'ACa3734bc1ea1e13aff053fad4fba54f32'
 TWILIO_AUTH_TOKEN = 'b541447a536390e793f986603c94d45a'
 TWILIO_WHATSAPP_NUMBER = 'whatsapp:+14155238886'
+
+
+
+# Academic Chatbot
+
+GEMINI_API_KEY = config(
+    "GEMINI_API_KEY",
+    default=""
+)
+
+GEMINI_MODEL = config(
+    "GEMINI_MODEL",
+    default="gemini-2.5-flash-lite"
+)
+
+ACADEMIC_CHATBOT_MAX_QUERY_LENGTH = config(
+    "ACADEMIC_CHATBOT_MAX_QUERY_LENGTH",
+    default=12000,
+    cast=int,
+)
+
+ACADEMIC_CHATBOT_MAX_PLANNER_TASKS = config(
+    "ACADEMIC_CHATBOT_MAX_PLANNER_TASKS",
+    default=10,
+    cast=int,
+)
+
+ACADEMIC_CHATBOT_MAX_TOOL_EXECUTIONS = config(
+    "ACADEMIC_CHATBOT_MAX_TOOL_EXECUTIONS",
+    default=15,
+    cast=int,
+)
+
+ACADEMIC_CHATBOT_ALLOW_DEV_CONTEXT = config(
+    "ACADEMIC_CHATBOT_ALLOW_DEV_CONTEXT",
+    default=False,
+    cast=bool,
+)
+
+ACADEMIC_CHATBOT_CONTEXT_PROVIDER = config(
+    "ACADEMIC_CHATBOT_CONTEXT_PROVIDER",
+    default=""
+)
+
+
+GEMINI_TIMEOUT_MS = config(
+    "GEMINI_TIMEOUT_MS",
+    default=15000,
+    cast=int,
+)
+
+GEMINI_RETRY_ATTEMPTS = config(
+    "GEMINI_RETRY_ATTEMPTS",
+    default=3,
+    cast=int,
+)

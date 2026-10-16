@@ -16,7 +16,7 @@ djangorestframework_simplejwt==5.5.0
 et_xmlfile==2.0.0
 frozenlist==1.8.0
 holidays==0.28
-idna==3.10
+idna==3.20
 msgpack==1.1.1
 multidict==6.7.0
 mysqlclient==2.2.7
@@ -39,7 +39,25 @@ setuptools==80.9.0
 six==1.17.0
 sqlparse==0.5.3
 twilio==8.13.0
-typing_extensions==4.15.0
+typing_extensions==4.16.0
 tzdata==2025.2
 urllib3==2.4.0
 yarl==1.22.0
+
+
+
+# --- FastAPI Chatbot ---
+fastapi==0.143.0
+uvicorn==0.54.0
+
+# --- LangChain / LangGraph ---
+langchain-core==1.6.10
+langgraph==1.2.15
+langchain-openai==1.7.1
+langchain-anthropic==1.7.6
+langchain-google-genai==4.4.2
+
+# --- Testing ---
+httpx==0.28.1
+pytest==9.1.1
+

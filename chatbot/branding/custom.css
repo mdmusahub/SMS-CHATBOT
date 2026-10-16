@@ -1,0 +1,161 @@
+/* SMS Assistant theme for Open WebUI  (v3: purple, LeadBot-style, animated)
+   Colours and motion only. Open WebUI's name and logos are left untouched, as its licence requires.
+   Loaded from /static/custom.css. Change the palette in :root below.                              */
+
+:root {
+  --sms-purple:       oklch(64% 0.150 322);   /* main purple (user bubble, buttons, header accents) */
+  --sms-purple-dark:  oklch(52% 0.170 318);   /* hover, links, bold text */
+  --sms-purple-soft:  oklch(94% 0.040 322);   /* pale lavender: outlines, hover fills */
+  --sms-bubble-gray:  oklch(96.5% 0.004 300); /* assistant bubble */
+  --sms-green:        oklch(72% 0.17 150);    /* "online" dot */
+  --sms-ink:          oklch(30% 0.040 310);   /* text */
+  --sms-shadow:       0 8px 24px -10px oklch(52% 0.17 318 / .45);
+
+  /* Open WebUI's gray scale, tinted very slightly purple */
+  --color-gray-50:  oklch(98.4% 0.004 310);
+  --color-gray-100: oklch(96.4% 0.007 310);
+  --color-gray-200: oklch(93.0% 0.011 310);
+  --color-gray-300: oklch(87.0% 0.018 310);
+  --color-gray-400: oklch(77.0% 0.026 310);
+  --color-gray-500: oklch(66.0% 0.034 310);
+  --color-gray-600: oklch(52.0% 0.040 310);
+  --color-gray-700: oklch(42.0% 0.046 310);
+  --color-gray-800: oklch(32.0% 0.046 310);
+  --color-gray-850: oklch(26.5% 0.044 310);
+  --color-gray-900: oklch(20.5% 0.040 310);
+  --color-gray-950: oklch(15.5% 0.035 310);
+}
+
+/* ---------- LIGHT MODE: clean white card look, "black" becomes deep purple-ink ---------- */
+:root:not(.dark) {
+  --color-white: oklch(99.6% 0.003 320);
+  --color-black: var(--sms-ink);
+}
+:root:not(.dark) body {
+  background: linear-gradient(160deg, oklch(98.6% 0.010 320), oklch(97.2% 0.018 322) 60%, oklch(98.2% 0.012 300)) fixed;
+}
+
+::selection { background: color-mix(in oklch, var(--sms-purple) 40%, transparent); }
+:focus-visible { outline: 2px solid var(--sms-purple) !important; outline-offset: 2px; }
+
+/* ---------- Your messages: ONE solid purple pill with white text ----------
+   Open WebUI nests several .rounded-3xl boxes; make them all transparent and paint only the outermost. */
+#messages-container .chat-user .rounded-3xl {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  color: #fff !important;
+}
+#messages-container .chat-user .rounded-3xl:not(.rounded-3xl .rounded-3xl) {
+  background: linear-gradient(135deg, var(--sms-purple), oklch(58% 0.17 316)) !important;
+  border-radius: 1.6rem !important;
+  box-shadow: var(--sms-shadow) !important;
+}
+#messages-container .chat-user .rounded-3xl *,
+#messages-container .chat-user .rounded-3xl p { color: #fff !important; background: transparent !important; }
+/* editing a sent message: keep the text box readable */
+#messages-container .chat-user textarea { color: var(--sms-ink) !important; background: #fff !important; }
+
+/* ---------- Assistant messages: soft gray rounded bubble ---------- */
+#messages-container .markdown-prose {
+  background: var(--sms-bubble-gray);
+  padding: .8rem 1.1rem;
+  border-radius: 1.4rem;
+  width: fit-content;
+  max-width: 100%;
+}
+.dark #messages-container .markdown-prose { background: oklch(28% 0.03 310); }
+.markdown-prose a { color: var(--sms-purple-dark); text-decoration-color: var(--sms-purple); }
+.dark .markdown-prose a { color: oklch(80% 0.12 322); }
+.markdown-prose strong { color: var(--sms-purple-dark); }
+.dark .markdown-prose strong { color: oklch(86% 0.09 322); }
+.markdown-prose blockquote { border-left: 4px solid var(--sms-purple); background: var(--sms-purple-soft); border-radius: 0 .6rem .6rem 0; }
+
+/* ---------- Input box: pill with purple outline ---------- */
+#message-input-container {
+  border-radius: 1.75rem;
+  border: 1.5px solid color-mix(in oklch, var(--sms-purple) 55%, transparent);
+  box-shadow: 0 4px 16px -8px oklch(52% 0.17 318 / .35);
+  transition: box-shadow .25s ease, border-color .25s ease, transform .25s ease;
+}
+#message-input-container:focus-within {
+  border-color: var(--sms-purple);
+  box-shadow: 0 0 0 4px color-mix(in oklch, var(--sms-purple) 22%, transparent), var(--sms-shadow);
+  transform: translateY(-2px);
+}
+
+/* Round action buttons (send, voice) */
+#send-message-button,
+:root:not(.dark) #message-input-container button[class*="bg-black"] {
+  background: linear-gradient(135deg, var(--sms-purple), oklch(58% 0.17 316)) !important;
+  color: #fff !important;
+  box-shadow: var(--sms-shadow);
+  transition: transform .18s cubic-bezier(.34, 1.56, .64, 1), box-shadow .2s ease;
+}
+#send-message-button:hover,
+:root:not(.dark) #message-input-container button[class*="bg-black"]:hover { transform: scale(1.14) rotate(-6deg); }
+#send-message-button:active,
+:root:not(.dark) #message-input-container button[class*="bg-black"]:active { transform: scale(.88); }
+
+/* Sign in / sign up */
+button[type="submit"]:not(#send-message-button) {
+  background: linear-gradient(135deg, var(--sms-purple), oklch(58% 0.17 316)) !important;
+  color: #fff !important;
+  border-radius: 999px;
+  transition: transform .18s cubic-bezier(.34, 1.56, .64, 1), box-shadow .2s ease;
+}
+button[type="submit"]:not(#send-message-button):hover { transform: translateY(-2px); box-shadow: var(--sms-shadow); }
+
+/* Quick-reply style outline pills (suggestion chips on an empty chat) */
+#chat-container button.rounded-xl, #chat-container button.rounded-2xl {
+  border: 1.5px solid var(--sms-purple);
+  color: var(--sms-purple-dark);
+  border-radius: 999px;
+  transition: background-color .18s ease, transform .18s cubic-bezier(.34, 1.56, .64, 1);
+}
+#chat-container button.rounded-xl:hover, #chat-container button.rounded-2xl:hover {
+  background: var(--sms-purple-soft);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Sidebar */
+#sidebar a, #sidebar button { transition: transform .18s ease, background-color .18s ease; }
+#sidebar a:hover { transform: translateX(4px); }
+
+/* ---------- Animations ---------- */
+@keyframes sms-pop {
+  0%   { opacity: 0; transform: translateY(18px) scale(.96); }
+  55%  { opacity: 1; transform: translateY(-5px) scale(1.012); }
+  80%  { transform: translateY(2px) scale(.998); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes sms-bubble {
+  0%   { opacity: 0; transform: translateX(26px) scale(.9); }
+  60%  { opacity: 1; transform: translateX(-4px) scale(1.03); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes sms-rise {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes sms-ring {
+  0%   { box-shadow: 0 0 0 0 color-mix(in oklch, var(--sms-purple) 50%, transparent); }
+  70%  { box-shadow: 0 0 0 12px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+@keyframes sms-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-3px); }
+}
+
+#messages-container [id^="message-"] { animation: sms-pop .55s cubic-bezier(.22, 1, .36, 1) backwards; }
+#messages-container .chat-user .rounded-3xl:not(.rounded-3xl .rounded-3xl) { animation: sms-bubble .5s cubic-bezier(.22, 1, .36, 1) backwards; }
+#message-input-container { animation: sms-rise .6s cubic-bezier(.22, 1, .36, 1) backwards; }
+#send-message-button { animation: sms-ring 2s ease-out infinite; }
+#messages-container img[src*="favicon"], #messages-container img[src*="static"] { animation: sms-float 3.2s ease-in-out infinite; }
+
+* { scrollbar-width: thin; scrollbar-color: var(--color-gray-400) transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
