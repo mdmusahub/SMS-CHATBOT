@@ -5,6 +5,9 @@ from .audit import audit
 from .drf_client import DRFError
 from .guard import AccessDenied, parse_student_id
 from .permissions import CategoryDenied, require
+import logging
+
+logger = logging.getLogger(__name__)
 
 DENIED = (
     "ACCESS_DENIED: you are not authorized to view that information, "
@@ -52,7 +55,18 @@ def _run(config: RunnableConfig, name: str, student_id, fn):
         elif category:
             # Category-level authorization also applies to class-wide tools.
             require(session.ctx, category)
+        logger.warning(
+        "CHATBOT_TOOL_START name=%s role=%s",
+        name,
+        session.ctx.role,
+        )
         result = str(fn(session, sid))[:4000]
+        logger.warning(
+        "CHATBOT_TOOL_END name=%s role=%s result_chars=%d",
+        name,
+        session.ctx.role,
+        len(result),
+)
         audit(path, "tool", tool=name, student_id=sid, allowed=True, **who)
         return result
     except LookupError:
@@ -61,8 +75,20 @@ def _run(config: RunnableConfig, name: str, student_id, fn):
         audit(path, "tool", tool=name, student_id=str(student_id)[:20], allowed=False,
               reason="category", **who)
         return f"ACCESS_DENIED: {exc} Tell the user their role cannot view that kind of information."
-    except (AccessDenied, DRFError):
-        audit(path, "tool", tool=name, student_id=str(student_id)[:20], allowed=False, **who)
+    except (AccessDenied, DRFError) as exc:
+        logger.warning(
+            "CHATBOT_TOOL_FAIL name=%s error_type=%s",
+            name,
+            type(exc).__name__,
+        )
+        audit(
+            path,
+            "tool",
+            tool=name,
+            student_id=str(student_id)[:20],
+            allowed=False,
+            **who,
+        )
         return DENIED
 
 

@@ -21,6 +21,8 @@ from .tool_support import _fn, _run, _target
 STAFF_ROLES = {"director", "office staff"}
 STUDENT_ROLES = {"student", "guardian"}
 TEACHER_ROLE = "teacher"
+import logging
+logger = logging.getLogger(__name__)
 
 
 def _clean_name(value: Any) -> str:
@@ -43,16 +45,39 @@ def _positive_id(value: Any, label: str = "id") -> int:
 
 
 def _rows(session, path: str, params: dict | None = None) -> list[dict]:
-    """Use the existing DRFClient pagination handling and fail closed on bad shapes."""
+    """Fetch rows through DRFClient and log only endpoint/count diagnostics."""
     data = session.client.get_all(path, params=params)
+
     if not isinstance(data, list):
+        logger.warning(
+            "ACADEMIC_API_SHAPE path=%s type=%s",
+            path,
+            type(data).__name__,
+        )
         return []
+
+    logger.warning(
+        "ACADEMIC_API_ROWS path=%s count=%d",
+        path,
+        len(data),
+    )
+
     return [row for row in data if isinstance(row, dict)]
 
 
 def _levels(session) -> list[dict]:
     rows = _rows(session, "/d/year-levels/")
-    return [r for r in rows if r.get("id") is not None and r.get("level_name")]
+    levels = [
+        r for r in rows
+        if r.get("id") is not None and r.get("level_name")
+    ]
+
+    logger.warning(
+        "ACADEMIC_LEVEL_NAMES=%s",
+        [(r.get("id"), r.get("level_name")) for r in levels],
+    )
+
+    return levels
 
 
 def _level_maps(levels: list[dict]):
@@ -591,6 +616,15 @@ def teacher_lookup(
                 "class_period_assignments": teacher_assignments[:8],
             })
         if not found:
+            if not all_scope and not assignments:
+                return (
+                    "No verified teacher assignments were found for the requested class. "
+                    "The timetable endpoint returned no usable teacher assignments. "
+                    "A teacher's subject specialization does not confirm that they are "
+                    "assigned to this class. Please configure the assignments using "
+                    "the school's existing assignment interface."
+                )
+
             return "No matching teacher was found within your permitted class scope."
         return json.dumps({"count": len(found), "teachers": found[:15]}, ensure_ascii=False)
 

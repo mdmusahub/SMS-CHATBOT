@@ -57,3 +57,178 @@
 {"ts": 1792185003.3, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
 {"ts": 1792185004.091, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
 {"ts": 1792185005.277, "event": "tool", "tool": "teacher_lookup", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792215174.838, "event": "login_ok", "owner": "postman_test_user", "user_id": 1, "role": "director", "students": 0, "all_students": true}
+{"ts": 1792215186.124, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792215187.735, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792215190.872, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792215195.443, "event": "tool_loop_limit", "owner": "postman_test_user"}
+{"ts": 1792215272.381, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792215273.827, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792215274.973, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792215276.257, "event": "tool_loop_limit", "owner": "postman_test_user"}
+{"ts": 1792215301.831, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792215302.776, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792215303.743, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792215305.069, "event": "tool_loop_limit", "owner": "postman_test_user"}
+{"ts": 1792215950.617, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792215951.962, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792215953.102, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792215954.301, "event": "tool_loop_limit", "owner": "postman_test_user"}
+{"ts": 1792216095.397, "event": "login_ok", "owner": "postman_test_user", "user_id": 1, "role": "director", "students": 0, "all_students": true}
+{"ts": 1792216114.558, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792216116.279, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792216117.601, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792216118.929, "event": "tool_loop_limit", "owner": "postman_test_user"}
+{"ts": 1792216272.375, "event": "login_ok", "owner": "postman_test_user", "user_id": 1, "role": "director", "students": 0, "all_students": true}
+{"ts": 1792216278.863, "event": "tool", "tool": "teacher_lookup", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792216283.511, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792216286.649, "event": "tool", "tool": "teacher_lookup", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792216288.019, "event": "tool_loop_limit", "owner": "postman_test_user"}
+{"ts": 1792217358.516, "event": "tool", "tool": "teacher_lookup", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792217677.362, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792217757.097, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792217761.733, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792217762.736, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792217764.157, "event": "tool_loop_limit", "owner": "postman_test_user"}
+{"ts": 1792217770.608, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792217771.944, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792217773.312, "event": "tool", "tool": "find_student", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792217774.309, "event": "tool_loop_limit", "owner": "postman_test_user"}
+{"ts": 1792217788.573, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792217789.841, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792217791.147, "event": "tool_loop_limit", "owner": "postman_test_user"}
+{"ts": 1792217849.162, "event": "login_ok", "owner": "postman_test_user", "user_id": 1, "role": "director", "students": 0, "all_students": true}
+{"ts": 1792217853.854, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792217858.213, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792217859.146, "event": "tool", "tool": "find_student", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792217860.424, "event": "tool_loop_limit", "owner": "postman_test_user"}
+{"ts": 1792217870.055, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792217871.371, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792217873.416, "event": "tool", "tool": "find_student", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792217874.396, "event": "tool_loop_limit", "owner": "postman_test_user"}
+{"ts": 1792218826.775, "event": "login_ok", "owner": "postman_test_user", "user_id": 1, "role": "director", "students": 0, "all_students": true}
+{"ts": 1792218831.978, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219220.124, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219254.178, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219258.735, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219259.794, "event": "tool", "tool": "find_student", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219267.684, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219289.598, "event": "tool", "tool": "teacher_lookup", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219317.793, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219318.044, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219371.786, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219386.73, "event": "tool", "tool": "teacher_lookup", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219398.524, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219406.333, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219415.62, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219520.71, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219586.433, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219599.617, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219705.677, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219727.441, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219810.283, "event": "tool", "tool": "teacher_lookup", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219811.543, "event": "tool", "tool": "find_student", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219816.521, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219821.568, "event": "tool", "tool": "teacher_lookup", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219822.727, "event": "tool", "tool": "find_student", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219824.044, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219835.893, "event": "tool", "tool": "teacher_lookup", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219861.629, "event": "tool", "tool": "teacher_lookup", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219862.72, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219864.183, "event": "tool", "tool": "find_student", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219888.534, "event": "tool", "tool": "teacher_lookup", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219927.163, "event": "tool", "tool": "teacher_lookup", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219929.006, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792219930.327, "event": "tool", "tool": "find_student", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792220826.717, "event": "tool", "tool": "teacher_lookup", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792220967.769, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792220995.512, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792221014.905, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792221016.276, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792224278.296, "event": "login_ok", "owner": "postman_test_user", "user_id": 120, "role": "student", "students": 1, "all_students": false}
+{"ts": 1792224285.212, "event": "tool", "tool": "subject_list", "student_id": "None", "allowed": false, "user_id": 120, "role": "student"}
+{"ts": 1792224314.331, "event": "tool", "tool": "attendance_summary", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792224367.711, "event": "tool", "tool": "get_student_class", "student_id": 8, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792224405.739, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792224469.238, "event": "tool", "tool": "find_student", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792224554.495, "event": "tool", "tool": "teacher_lookup", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792224555.291, "event": "tool", "tool": "get_timetable", "student_id": "None", "allowed": false, "user_id": 120, "role": "student"}
+{"ts": 1792224615.76, "event": "tool", "tool": "teacher_lookup", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792224616.952, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792224788.074, "event": "tool", "tool": "teacher_lookup", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792224905.106, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792225002.768, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792225065.077, "event": "tool", "tool": "find_student", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792225167.292, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792225194.683, "event": "tool", "tool": "subject_list", "student_id": "None", "allowed": false, "user_id": 120, "role": "student"}
+{"ts": 1792395824.664, "event": "login_ok", "owner": "postman_test_user", "user_id": 1, "role": "director", "students": 0, "all_students": true}
+{"ts": 1792395833.647, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792427625.756, "event": "login_ok", "owner": "ccf7ce2999f34945a7b95f4b5878f27f", "user_id": 1, "role": "director", "students": 0, "all_students": true}
+{"ts": 1792427642.331, "event": "tool", "tool": "whoami", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792427692.385, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792427738.242, "event": "tool", "tool": "find_student", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792427745.617, "event": "tool", "tool": "attendance_summary", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792429307.571, "event": "tool", "tool": "find_student", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792429428.872, "event": "logout", "owner": "ccf7ce2999f34945a7b95f4b5878f27f"}
+{"ts": 1792429501.254, "event": "logout", "owner": "ccf7ce2999f34945a7b95f4b5878f27f"}
+{"ts": 1792429502.576, "event": "logout", "owner": "ccf7ce2999f34945a7b95f4b5878f27f"}
+{"ts": 1792429503.452, "event": "logout", "owner": "ccf7ce2999f34945a7b95f4b5878f27f"}
+{"ts": 1792429808.558, "event": "login_failed", "owner": "68926a39c82049a2b73fbe272af82f85", "status": 400}
+{"ts": 1792429822.821, "event": "login_ok", "owner": "68926a39c82049a2b73fbe272af82f85", "user_id": 1, "role": "director", "students": 0, "all_students": true}
+{"ts": 1792429863.759, "event": "logout", "owner": "68926a39c82049a2b73fbe272af82f85"}
+{"ts": 1792429888.356, "event": "login_ok", "owner": "68926a39c82049a2b73fbe272af82f85", "user_id": 1, "role": "director", "students": 0, "all_students": true}
+{"ts": 1792430234.298, "event": "login_ok", "owner": "c8f17d62c2d441779b9aab6d9fb3a355", "user_id": 1, "role": "director", "students": 0, "all_students": true}
+{"ts": 1792430514.638, "event": "login_ok", "owner": "0951f63823eb4da7b84292d4eef7e117", "user_id": 1, "role": "director", "students": 0, "all_students": true}
+{"ts": 1792430974.477, "event": "login_ok", "owner": "7061626636764e46801f1542c3268dd6", "user_id": 1, "role": "director", "students": 0, "all_students": true}
+{"ts": 1792431054.618, "event": "logout", "owner": "7061626636764e46801f1542c3268dd6"}
+{"ts": 1792431085.11, "event": "login_ok", "owner": "7061626636764e46801f1542c3268dd6", "user_id": 120, "role": "student", "students": 1, "all_students": false}
+{"ts": 1792431104.113, "event": "tool", "tool": "whoami", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792431458.391, "event": "login_ok", "owner": "f193cd04546a4129afa761d318158104", "user_id": 120, "role": "student", "students": 1, "all_students": false}
+{"ts": 1792431468.557, "event": "login_ok", "owner": "f193cd04546a4129afa761d318158104", "user_id": 120, "role": "student", "students": 1, "all_students": false}
+{"ts": 1792431495.287, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792431564.954, "event": "tool", "tool": "get_student_class", "student_id": 8, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792431683.319, "event": "login_ok", "owner": "caa0b8854f7444b487fa770b844509f7", "user_id": 120, "role": "student", "students": 1, "all_students": false}
+{"ts": 1792431747.382, "event": "tool", "tool": "whoami", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792431965.434, "event": "login_ok", "owner": "6adbadfc60154396b5e4b61588f6acfe", "user_id": 1, "role": "director", "students": 0, "all_students": true}
+{"ts": 1792431990.201, "event": "tool", "tool": "whoami", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792432180.963, "event": "login_ok", "owner": "f293a78806ca44a6a52e45160a7ea566", "user_id": 1, "role": "director", "students": 0, "all_students": true}
+{"ts": 1792432188.018, "event": "tool", "tool": "whoami", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792432196.94, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792432226.62, "event": "logout", "owner": "f293a78806ca44a6a52e45160a7ea566"}
+{"ts": 1792432248.902, "event": "login_ok", "owner": "f293a78806ca44a6a52e45160a7ea566", "user_id": 120, "role": "student", "students": 1, "all_students": false}
+{"ts": 1792432255.135, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792432269.607, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792432278.645, "event": "tool", "tool": "attendance_summary", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792432314.416, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792432630.243, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792432675.408, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792432726.248, "event": "tool", "tool": "my_permissions", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792432787.463, "event": "tool", "tool": "check_access", "student_id": 8, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792432841.89, "event": "tool", "tool": "attendance_summary", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792432863.695, "event": "tool", "tool": "get_student_class", "student_id": 8, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792432893.252, "event": "tool", "tool": "get_student_profile", "student_id": 8, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792433883.428, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792433906.704, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792434935.661, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792434963.901, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792568200.299, "event": "login_ok", "owner": "1f71427368f142a285cf02f6e8329788", "user_id": 1, "role": "director", "students": 0, "all_students": true}
+{"ts": 1792568219.84, "event": "tool", "tool": "subject_list", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792568259.959, "event": "tool", "tool": "find_student", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792568283.802, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792568336.323, "event": "tool", "tool": "find_student", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792568337.812, "event": "tool", "tool": "attendance_summary", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792568376.627, "event": "tool", "tool": "whoami", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792568412.955, "event": "logout", "owner": "1f71427368f142a285cf02f6e8329788"}
+{"ts": 1792568436.613, "event": "login_ok", "owner": "1f71427368f142a285cf02f6e8329788", "user_id": 120, "role": "student", "students": 1, "all_students": false}
+{"ts": 1792568443.489, "event": "tool", "tool": "get_timetable", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792568491.655, "event": "tool", "tool": "my_permissions", "student_id": null, "allowed": true, "user_id": 120, "role": "student"}
+{"ts": 1792568580.522, "event": "logout", "owner": "1f71427368f142a285cf02f6e8329788"}
+{"ts": 1792568601.098, "event": "login_ok", "owner": "1f71427368f142a285cf02f6e8329788", "user_id": 1, "role": "director", "students": 0, "all_students": true}
+{"ts": 1792568615.054, "event": "tool", "tool": "attendance_summary", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792568619.694, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792568621.041, "event": "tool", "tool": "find_student", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792568622.144, "event": "tool_loop_limit", "owner": "1f71427368f142a285cf02f6e8329788"}
+{"ts": 1792568646.472, "event": "tool", "tool": "attendance_summary", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792568647.442, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792568648.585, "event": "tool", "tool": "list_students_by_class", "student_id": null, "allowed": true, "user_id": 1, "role": "director"}
+{"ts": 1792568649.864, "event": "tool_loop_limit", "owner": "1f71427368f142a285cf02f6e8329788"}

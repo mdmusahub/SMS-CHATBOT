@@ -19,3 +19,14 @@ example: **StudentGuardianView**
 example:
 [http://127.0.0.1:8000/d/classroom-types](http://127.0.0.1:8000/d/classroom-types/)/
 
+
+
+<!-- for backend run  -->
+ .\.venv\Scripts\python.exe manage.py runserver 127.0.0.1:8001
+
+
+ <!-- for frontend run  -->
+ .\.venv\Scripts\python.exe -m uvicorn chatbot.server:create_app --factory --host 127.0.0.1 --port 8100 --log-level debug
+ 
+ <!-- Streamlit frontend -->
+ .\.venv\Scripts\python.exe -m streamlit run .\streamlit_frontend\app.py
